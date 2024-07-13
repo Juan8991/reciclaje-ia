@@ -1,0 +1,141 @@
+.home-container{
+    height: 90vh;      
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.titles-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    height: 70px;font-size:2.2rem;font-weight: 700;
+}
+.subtitle{
+    font-size:1.9rem;font-weight: 600;
+}
+.profile-card  {
+    height:60%;      
+    width: auto; 
+    position: relative;
+    
+  } 
+  .card-imge{
+    width: 100%;
+    height: 100%;
+  }
+  .img-robot {
+    border-radius: 2rem;       
+    width: 100%; 
+    height: 100%;       
+    object-fit: cover;  
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0; /* Ajusta según sea necesario para posicionar el contenido sobre la imagen */
+    left: 0;
+    width: 100%; /* Esto hace que se extienda por todo el ancho de la tarjeta */
+    background-color: rgba(0, 0, 0, 0); /* fondo semitransparente, ajusta la opacidad como necesites */
+    color: white; /* color del texto */
+    padding: 20px; /* Añade algo de espacio dentro del contenido */
+    box-sizing: border-box; /* Asegúrate de que el padding no cambie el ancho */ 
+    text-align: center;
+    height: 30%;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  
+  .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px ;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+  }
+  
+  .robot-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%; /* Ajusta la altura del difuminado */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #dee3ed 95%);
+    pointer-events: none; /* Permite hacer clic a través del pseudo-elemento */
+  }
+  .custom-button {
+    padding: 0 10px;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición al hacer hover */
+    box-shadow: 0 0 0 3px rgba(255, 98, 0, 0.5);
+  }
+  
+  .custom-button:hover {
+    background-color: rgb(42, 42, 42); /* Cambia el color de fondo al hacer hover */
+  }
+  
+  h2.subtitle {
+   width: fit-content;
+    margin: 10px 0;
+    overflow: hidden; /* Ensures the text is not visible outside the bounding box */
+    border-right: .15em solid rgba(255, 98, 0, 0.5); /* The cursor */
+    white-space: nowrap; /* Keeps the text on a single line */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation:
+        typing 2.5s steps(50, end),
+        blink-caret .75s  infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+  
+@media (max-width: 508px) {
+  img{
+    width: 400px;
+  }
+  h2.subtitle{
+    font-size: 1.5rem;
+  }
+
+}
+@media (max-width: 400px) {
+  img{
+    width: 300px;
+  }
+  h2.subtitle{
+    font-size: 1.2rem;
+  }
+
+}

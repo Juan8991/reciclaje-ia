@@ -1,0 +1,50 @@
+<div class="home-container">
+    
+        <header class="titles-container">
+            <!-- <h1 class="title">  Hackathon SIC 2023  </h1> -->
+            <div class="h1-container"><img src="assets/images/h1_basura.webp" alt="Titulo pagina"></div>
+            <h2 class="subtitle"> ¡Haz la difrencIA! </h2>
+        </header>
+        <div class="profile-card">
+            @if(showVideo) {
+                <div class="prediction-container">
+                    <span class="span-chip">{{ prediction }}</span> 
+                </div>
+                
+            }
+            <div class="image-container">
+                @if(!showVideo) {
+                    <img class="img-robot" src="assets/images/robot_reciclador.webp"
+                    alt="Avatar">
+                }
+                <video #videoElement class="video-container" autoplay></video>    
+                   
+                
+                <!-- <img class="img-robot" src="assets/images/robot.webp"
+                    alt="Avatar"> -->
+            </div>
+            
+
+        <div class="card-content">
+        
+            <section class="btn-container">
+                <button mat-raised-button class="custom-button-green" (click)="startVideo()">Iniciar</button>
+                <button mat-raised-button class="custom-button" (click)="stopVideo()">Pausar</button>
+            </section>
+        </div>
+
+        </div>
+
+        <!-- <video #videoElement class="video-container" autoplay></video>
+        <div>
+            <button (click)="startVideo()">Iniciar</button>
+            <button (click)="stopVideo()">Pausar</button>
+        </div> -->
+       
+    
+    <!-- <video autoplay></video>
+    <p>{{ prediction }}</p> -->
+
+</div>
+
+
