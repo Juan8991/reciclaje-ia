@@ -121,7 +121,7 @@ export class VideoComponent implements OnInit {
           if (blob) {
             this.predictService.getPredict(blob).subscribe({
               next:(response:DataModelPredict) => {
-                this.prediction = `${this.itemsEs[response.prediction-1]}`;
+                this.prediction = `${this.itemsEs[response.prediction]}`;
                 this.cdr.detectChanges();  // Forzar la detección de cambios
               },
               error:(error) => {
